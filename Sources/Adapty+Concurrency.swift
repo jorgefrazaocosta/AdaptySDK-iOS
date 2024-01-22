@@ -304,6 +304,9 @@ import StoreKit
         ///   - paywall: A ``AdaptyPaywall`` object.
         ///  - Throws: An ``AdaptyError`` object
         public static func logShowPaywall(_ paywall: AdaptyPaywall) async throws {
+
+            fatalError("Log Show Paywall error")
+
             return try await withCheckedThrowingContinuation { continuation in
                 Adapty.logShowPaywall(paywall) { error in
                     if let error = error {
